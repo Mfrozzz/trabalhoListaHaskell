@@ -7,3 +7,6 @@ insere l(x:xs) | l==x = x:xs
                |otherwise = x : insere l xs
 
 -- 
+insereOrd l [] = [l]
+insereOrd l (x:xs)| l <= x    = l : x : xs
+                  | otherwise = x : insereOrd l xs
